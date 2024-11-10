@@ -69,8 +69,8 @@ desarrolladores de recursos en línea que facilitaron el desarrollo de esta apli
 Este proyecto está licenciado bajo la Licencia GPL.
 
 
-## 8. Información adicional proporcionada React
-# Getting Started with Create React App
+# 8. Información adicional proporcionada React
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
