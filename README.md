@@ -1,5 +1,5 @@
 # Frontend - Sistema de Gestión de Cursos y Usuarios
-***1. Título del Proyecto***
+## 1. Título del Proyecto
    Sistema de Gestión de Cursos y Usuarios - Frontend
 
 ***2. Descripción del Proyecto***
