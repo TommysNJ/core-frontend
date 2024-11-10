@@ -1,0 +1,78 @@
+/* General Layout */
+.layout {
+    display: flex;
+    height: 100vh;
+    position: relative; /* Para colocar el botón de logout de forma absoluta */
+}
+
+/* Botón de Cerrar Sesión */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Mover el botón a la esquina superior derecha */
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.logout-button:hover {
+    background-color: #333;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    min-width: 250px;
+    max-width: 300px;
+    height: 100%; /* Para que la barra lateral ocupe toda la altura */
+    padding-top: 20px; /* Espacio adicional en la parte superior */
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #ccc;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Buttons */
+.btn-sidebar {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-sidebar:hover {
+    background-color: #333;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.main-content h1 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+}

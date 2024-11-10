@@ -1,0 +1,38 @@
+.cursos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.curso-item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.curso-item strong {
+    color: black;
+}
+
+.btn-inscribirse {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-inscribirse:hover {
+    background-color: #333;
+}
+
+.mensaje {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error-mensaje {
+    color: red;
+    font-weight: bold;
+}

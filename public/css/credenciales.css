@@ -1,0 +1,82 @@
+/* General styles for centering and responsiveness */
+/*body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}*/
+
+.inicio-container, .registro-container, .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.inicio-container h1, .registro-container h2, .login-container h3 {
+    font-size: 2em;
+    color: black;
+}
+
+/* Buttons */
+.botones-inicio .btn, .btn-registrarse, .btn-login, .btn-log {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.btn-iniciar {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-registrarse, .btn-login, .btn-log {
+    background-color: black;
+    color: white;
+}
+
+
+/* Responsive input fields */
+.form-group {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+    width: 100%;
+    max-width: 280px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Error message */
+.error-text {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+
