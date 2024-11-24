@@ -37,7 +37,7 @@ const Reportes = () => {
                     Cantidad de Inscripciones Globales
                 </button>
                 <button onClick={handleFiltrosClick} className="btn-reporte">
-                    Filtrar Reportes
+                    Filtrar Reportes con Calificación
                 </button>
             </div>
 
