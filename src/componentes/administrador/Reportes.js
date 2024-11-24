@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PopularidadTemas from "./PopularidadTemas";
 import CantidadInscripciones from "./CantidadInscripciones";
+import FiltrosReporte from "./FiltrosReporte";
 
 const Reportes = () => {
     const [view, setView] = useState("");
@@ -11,6 +12,10 @@ const Reportes = () => {
 
     const handleCantidadInscripcionesClick = () => {
         setView("cantidadInscripciones");
+    };
+
+    const handleFiltrosClick = () => {
+        setView("filtrosReporte");
     };
 
     return (
@@ -31,29 +36,16 @@ const Reportes = () => {
                 >
                     Cantidad de Inscripciones Globales
                 </button>
-            </div>
-
-            {/* Filtros */}
-            <div className="reportes-filtros">
-                <label>
-                    Género:
-                    <select>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                    </select>
-                </label>
-                <label>
-                    Rango de Edad:
-                    <input type="number" placeholder="Mínimo" />
-                    <input type="number" placeholder="Máximo" />
-                </label>
-                <button className="btn-filtrar">Filtrar</button>
+                <button onClick={handleFiltrosClick} className="btn-reporte">
+                    Filtrar Reportes
+                </button>
             </div>
 
             {/* Renderizar la vista seleccionada */}
             <div className="reportes-content">
                 {view === "popularidadTemas" && <PopularidadTemas />}
                 {view === "cantidadInscripciones" && <CantidadInscripciones />}
+                {view === "filtrosReporte" && <FiltrosReporte />}
             </div>
         </div>
     );
