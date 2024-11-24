@@ -3,6 +3,7 @@ import Logout from '../credenciales/Logout';
 import GestionUsuarios from './GestionUsuarios';
 import GestionCursos from './GestiónCursos';
 import GestionTemas from './GestionTemas';
+import Reportes from './Reportes';
 
 const AdminPage = () => {
     return (
@@ -22,6 +23,7 @@ const AdminPage = () => {
                     {/* Aquí se agregarán otras rutas de administrador */}
                     <Route path="cursos" element={<GestionCursos />} />
                     <Route path="temas" element={<GestionTemas />} />
+                    <Route path="reportes" element={<Reportes />} />
                 </Routes>
             </main>
         </div>
