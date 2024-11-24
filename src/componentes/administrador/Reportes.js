@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PopularidadTemas from "./PopularidadTemas";
+import CantidadInscripciones from "./CantidadInscripciones";
 
 const Reportes = () => {
     const [view, setView] = useState("");
@@ -52,10 +53,7 @@ const Reportes = () => {
             {/* Renderizar la vista seleccionada */}
             <div className="reportes-content">
                 {view === "popularidadTemas" && <PopularidadTemas />}
-                {view === "cantidadInscripciones" && (
-                    <p>Aquí irá la funcionalidad de Cantidad de Inscripciones.</p>
-                    
-                )}
+                {view === "cantidadInscripciones" && <CantidadInscripciones />}
             </div>
         </div>
     );
