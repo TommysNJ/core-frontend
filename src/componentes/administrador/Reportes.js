@@ -54,6 +54,7 @@ const Reportes = () => {
                 {view === "popularidadTemas" && <PopularidadTemas />}
                 {view === "cantidadInscripciones" && (
                     <p>Aquí irá la funcionalidad de Cantidad de Inscripciones.</p>
+                    
                 )}
             </div>
         </div>
