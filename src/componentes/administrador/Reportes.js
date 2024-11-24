@@ -1,62 +1,60 @@
-// componentes/administrador/Reportes/Reportes.js
 import React, { useState } from "react";
+import PopularidadTemas from "./PopularidadTemas";
 
 const Reportes = () => {
-    const [genero, setGenero] = useState("");
-    const [rangoEdadInicio, setRangoEdadInicio] = useState("");
-    const [rangoEdadFin, setRangoEdadFin] = useState("");
+    const [view, setView] = useState("");
 
-    const handleGeneroChange = (e) => {
-        setGenero(e.target.value);
+    const handlePopularidadTemasClick = () => {
+        setView("popularidadTemas");
     };
 
-    const handleRangoEdadInicioChange = (e) => {
-        setRangoEdadInicio(e.target.value);
-    };
-
-    const handleRangoEdadFinChange = (e) => {
-        setRangoEdadFin(e.target.value);
-    };
-
-    const handleFiltrar = () => {
-        console.log("Filtros aplicados:");
-        console.log("Género:", genero);
-        console.log("Rango de Edad:", rangoEdadInicio, "-", rangoEdadFin);
-        // Aquí se implementará la lógica para realizar la solicitud al backend con los filtros
+    const handleCantidadInscripcionesClick = () => {
+        setView("cantidadInscripciones");
     };
 
     return (
         <div className="reportes-container">
             <h2>Reportes</h2>
+
+            {/* Botones de selección */}
             <div className="reportes-buttons">
-                <button className="btn-reporte-popularidad">Popularidad de Temáticas (con calificación)</button>
-                <button className="btn-reporte-inscripciones">Cantidad de Inscripciones Globales</button>
+                <button
+                    onClick={handlePopularidadTemasClick}
+                    className="btn-reporte"
+                >
+                    Popularidad de Temáticas con Calificación
+                </button>
+                <button
+                    onClick={handleCantidadInscripcionesClick}
+                    className="btn-reporte"
+                >
+                    Cantidad de Inscripciones Globales
+                </button>
             </div>
+
+            {/* Filtros */}
             <div className="reportes-filtros">
-                <label htmlFor="genero">Género:</label>
-                <select id="genero" value={genero} onChange={handleGeneroChange}>
-                    <option value="">Seleccione un género</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                </select>
-                <div className="rango-edad">
-                    <label htmlFor="rangoEdadInicio">Rango de Edad:</label>
-                    <input
-                        type="number"
-                        id="rangoEdadInicio"
-                        placeholder="Desde"
-                        value={rangoEdadInicio}
-                        onChange={handleRangoEdadInicioChange}
-                    />
-                    <input
-                        type="number"
-                        id="rangoEdadFin"
-                        placeholder="Hasta"
-                        value={rangoEdadFin}
-                        onChange={handleRangoEdadFinChange}
-                    />
-                </div>
-                <button className="btn-filtrar" onClick={handleFiltrar}>Filtrar</button>
+                <label>
+                    Género:
+                    <select>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                </label>
+                <label>
+                    Rango de Edad:
+                    <input type="number" placeholder="Mínimo" />
+                    <input type="number" placeholder="Máximo" />
+                </label>
+                <button className="btn-filtrar">Filtrar</button>
+            </div>
+
+            {/* Renderizar la vista seleccionada */}
+            <div className="reportes-content">
+                {view === "popularidadTemas" && <PopularidadTemas />}
+                {view === "cantidadInscripciones" && (
+                    <p>Aquí irá la funcionalidad de Cantidad de Inscripciones.</p>
+                )}
             </div>
         </div>
     );
