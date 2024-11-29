@@ -1,10 +1,10 @@
-#Frontend - Sistema de Gestión de Cursos y Usuarios
+# Frontend - Sistema de Gestión de Cursos y Usuarios
 
-##1. Título del Proyecto
+## 1. Título del Proyecto
 
 Sistema de Gestión de Cursos y Usuarios - Frontend
 
-##2. Descripción del Proyecto
+## 2. Descripción del Proyecto
 Este es el frontend del sistema de gestión de cursos y usuarios. 
 Desarrollado en React, el frontend proporciona una interfaz de 
 usuario (UI) intuitiva y adaptada para cada tipo de usuario, ya 
@@ -23,7 +23,7 @@ permitiendo fácil mantenimiento y escalabilidad.
 - Generación de reportes: Incluye funcionalidades para 
 visualizar reportes en tablas dinámicas y gráficos interactivos.
 
-##3. Tabla de Contenidos
+## 3. Tabla de Contenidos
 - Instalación y Ejecución
 - Uso del Proyecto
 - Reportes
@@ -31,7 +31,7 @@ visualizar reportes en tablas dinámicas y gráficos interactivos.
 - Licencia
 - Información adicional proporcionada por React
 
-##4. Instalación y Ejecución del Proyecto
+## 4. Instalación y Ejecución del Proyecto
 	1.	Clona el repositorio:
 git clone <URL_DEL_REPOSITORIO_FRONTEND>
 	2.	Instala las dependencias:
@@ -40,7 +40,7 @@ npm install
 npm start
 La aplicación se ejecutará en http://localhost:3000.
 
-##5. Uso del Proyecto
+## 5. Uso del Proyecto
 El frontend se divide en secciones específicas de acuerdo al rol del 
 usuario.
 
@@ -69,7 +69,7 @@ Al iniciar sesión, cada usuario recibe un token JWT que se almacena en
 localStorage y se utiliza para autenticar las solicitudes a las APIs 
 protegidas.
 
-##6. Reportes
+## 6. Reportes
 El frontend permite visualizar los reportes generados por el backend en 
 tablas dinámicas y gráficos interactivos (gráficos de pastel). Los reportes 
 disponibles son:
@@ -103,17 +103,17 @@ administrador.
 - Los resultados se muestran en una tabla y se visualizan en un gráfico 
 interactivo, haciendo más comprensible la información generada.
 
-##7. Créditos
+## 7. Créditos
 Este proyecto fue desarrollado por Tomás Núñez Jaramillo. Se agradece a la comunidad 
 de React y a los desarrolladores de recursos en línea que facilitaron el 
 desarrollo de esta aplicación.
 
-##8. Licencia
+## 8. Licencia
 Este proyecto está licenciado bajo la Licencia GPL. Esto permite a otros 
 usuarios modificar y distribuir el proyecto bajo los mismos términos de la 
 licencia GPL.
 
-##9. Información adicional proporcionada por React
+## 9. Información adicional proporcionada por React
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
