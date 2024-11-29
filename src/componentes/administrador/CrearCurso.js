@@ -142,7 +142,8 @@ export default CrearCurso;*/
 // componentes/administrador/gestionCursos/CrearCurso.js
 
 
-//añadido 
+//añadido  
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
