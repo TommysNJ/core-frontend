@@ -1,75 +1,119 @@
-# Frontend - Sistema de Gestión de Cursos y Usuarios
-## 1. Título del Proyecto
-   Sistema de Gestión de Cursos y Usuarios - Frontend
+#Frontend - Sistema de Gestión de Cursos y Usuarios
 
-## 2. Descripción del Proyecto
-   Este es el frontend del sistema de gestión de cursos y usuarios. Desarrollado en React,
-   el frontend proporciona una interfaz de usuario (UI) intuitiva y adaptada para cada tipo
-   de usuario, ya sea alumno, instructor o administrador. El diseño permite una navegación
-   fácil a través de una barra lateral y formularios claros para realizar operaciones CRUD
-   en usuarios, cursos y temas.
-   
-   Características:
-   - Acceso basado en roles: Cada usuario ve solo las opciones disponibles para su rol.
-   - Interfaz organizada: Cada sección se estructura en páginas específicas para una
-     experiencia fluida.
-   - Componentización en React: Cada elemento (cursos, temas, inscripciones) se maneja en
-     componentes separados, permitiendo fácil mantenimiento y escalabilidad.
+##1. Título del Proyecto
 
-## 3. Tabla de Contenidos
+Sistema de Gestión de Cursos y Usuarios - Frontend
+
+##2. Descripción del Proyecto
+Este es el frontend del sistema de gestión de cursos y usuarios. 
+Desarrollado en React, el frontend proporciona una interfaz de 
+usuario (UI) intuitiva y adaptada para cada tipo de usuario, ya 
+sea alumno, instructor o administrador. El diseño permite una 
+navegación fácil a través de una barra lateral y formularios claros 
+para realizar operaciones CRUD en usuarios, cursos, temas y 
+subtemáticas, además de generar reportes dinámicos.
+Características:
+- Acceso basado en roles: Cada usuario ve solo las opciones 
+disponibles para su rol.
+- Interfaz organizada: Cada sección se estructura en páginas 
+específicas para una experiencia fluida.
+- Componentización en React: Cada elemento (cursos, temas, 
+subtemáticas, reportes) se maneja en componentes separados, 
+permitiendo fácil mantenimiento y escalabilidad.
+- Generación de reportes: Incluye funcionalidades para 
+visualizar reportes en tablas dinámicas y gráficos interactivos.
+
+##3. Tabla de Contenidos
 - Instalación y Ejecución
 - Uso del Proyecto
+- Reportes
 - Créditos
 - Licencia
-- Información adicional proporcionada React
+- Información adicional proporcionada por React
 
-## 4. Instalación y Ejecución del Proyecto
-1. Clona el repositorio:
-   git clone <URL_DEL_REPOSITORIO_FRONTEND>
-2. Instala las dependencias:
-   npm install
-3. Ejecuta la aplicación:
-   npm start
+##4. Instalación y Ejecución del Proyecto
+	1.	Clona el repositorio:
+git clone <URL_DEL_REPOSITORIO_FRONTEND>
+	2.	Instala las dependencias:
+npm install
+	3.	Ejecuta la aplicación:
+npm start
+La aplicación se ejecutará en http://localhost:3000.
 
-   La aplicación se ejecutará en http://localhost:3000.
+##5. Uso del Proyecto
+El frontend se divide en secciones específicas de acuerdo al rol del 
+usuario.
 
-
-## 5. Uso del Proyecto
-El frontend se divide en secciones específicas de acuerdo al rol del usuario:
 Roles y Funcionalidades:
-- Alumnos: Pueden ver los cursos disponibles, inscribirse, registrar su progreso y calificar
-  los cursos.
-- Instructores: Pueden ver y gestionar los cursos que imparten, y ver el progreso de sus
-  alumnos en los cursos.
-- Administradores: Tienen acceso completo para gestionar usuarios, cursos y temas, y pueden
-  ver el listado completo de cada sección.
+- Alumnos: Pueden ver los cursos disponibles, inscribirse, registrar 
+su progreso y calificar los cursos.
+- Instructores: Pueden ver y gestionar los cursos que imparten, 
+además de ver el progreso de sus alumnos en los cursos.
+- Administradores: Tienen acceso completo para gestionar usuarios, 
+cursos, temas y subtemáticas, así como generar reportes detallados.
 
 Navegación y Componentes Principales:
-- Gestión de Usuarios: Los administradores pueden ver, crear, editar y eliminar alumnos e
-  instructores.
-- Gestión de Cursos: Permite la creación, edición y eliminación de cursos, además de la
-  asignación de instructores y temas a cada curso.
-- Gestión de Temas: Permite la creación, edición y eliminación de temas para categorizar los
-  cursos.
-
-Cada sección cuenta con formularios y listados dinámicos, que permiten gestionar los datos sin 
-recargar la página. Las solicitudes se envían al backend utilizando Axios, y las respuestas se 
-manejan de forma reactiva en el frontend.
+- Gestión de Usuarios: Los administradores pueden ver, crear, editar 
+y eliminar alumnos e instructores.
+- Gestión de Cursos: Permite la creación, edición y eliminación de 
+cursos, además de la asignación de instructores, temas y subtemáticas 
+a cada curso.
+- Gestión de Temas y Subtemáticas: Permite la creación, edición y 
+eliminación de temas y subtemáticas para categorizar los cursos.
+- Reportes: Los administradores pueden generar reportes de popularidad 
+de temáticas y subtemáticas, inscripciones globales, y reportes filtrados 
+según criterios específicos.
 
 Autenticación y Autorización:
-Al iniciar sesión, cada usuario recibe un token JWT que se almacena en localStorage y se 
-utiliza para autenticar las solicitudes a las APIs protegidas.
+Al iniciar sesión, cada usuario recibe un token JWT que se almacena en 
+localStorage y se utiliza para autenticar las solicitudes a las APIs 
+protegidas.
 
+##6. Reportes
+El frontend permite visualizar los reportes generados por el backend en 
+tablas dinámicas y gráficos interactivos (gráficos de pastel). Los reportes 
+disponibles son:
 
-## 6. Créditos
-Este proyecto fue desarrollado por Tu Nombre. Se agradece a la comunidad de React y a los 
-desarrolladores de recursos en línea que facilitaron el desarrollo de esta aplicación.
+Reporte de Popularidad de Temáticas:
+- Ruta: Popularidad de Temáticas
+- Descripción: Permite visualizar las temáticas más populares basadas en 
+las calificaciones e inscripciones recibidas.
 
-## 7. Licencia
-Este proyecto está licenciado bajo la Licencia GPL.
+Reporte de Porcentaje de Inscripciones:
+- Ruta: Cantidad de Inscripciones Globales
+- Descripción: Muestra el porcentaje de inscripciones por temática de forma 
+gráfica y ordenada.
 
+Reporte de Subtemáticas por Instructor:
+- Ruta: Reporte Subtemáticas por Profesor
+- Descripción: Al ingresar el correo de un instructor, se genera un reporte 
+con las subtemáticas más populares que imparte, ordenadas por su índice de 
+popularidad.
+- Uso: Ingresar el correo del instructor en el campo de texto habilitado. 
+Presionar el botón “Filtrar” para generar la tabla y gráfico.
 
-# 8. Información adicional proporcionada React
+Reporte con Filtros:
+- Ruta: Filtrar Reportes con Calificación
+- Descripción: Permite aplicar filtros personalizados como género y rango de 
+edad para generar reportes de popularidad de temáticas.
+
+Interacción con el Usuario:
+- Cada reporte se selecciona mediante un botón en la sección de reportes del 
+administrador.
+- Los resultados se muestran en una tabla y se visualizan en un gráfico 
+interactivo, haciendo más comprensible la información generada.
+
+##7. Créditos
+Este proyecto fue desarrollado por Tomás Núñez Jaramillo. Se agradece a la comunidad 
+de React y a los desarrolladores de recursos en línea que facilitaron el 
+desarrollo de esta aplicación.
+
+##8. Licencia
+Este proyecto está licenciado bajo la Licencia GPL. Esto permite a otros 
+usuarios modificar y distribuir el proyecto bajo los mismos términos de la 
+licencia GPL.
+
+##9. Información adicional proporcionada por React
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -140,3 +184,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
