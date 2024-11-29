@@ -58,6 +58,7 @@ const ListadoCursos = ({ cursos, onEdit, onCancel }) => {
                         <p>Instructor: {curso.instructor?.nombre || "No disponible"}</p>
                         <p>Email: {curso.instructor?.email || "No disponible"}</p>
                         <p>Tema: {curso.tema?.tipo || "No disponible"}</p>
+                        <p>Subtemática: {curso.subtematica?.tipo || "No disponible"}</p>
                         <button onClick={() => onEdit(curso.id_curso)} className="btn-editar">Editar</button>
                         <button onClick={() => handleEliminarClick(curso.id_curso)} className="btn-eliminar">Eliminar</button>
                     </div>
